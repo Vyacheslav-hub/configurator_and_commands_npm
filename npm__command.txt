@@ -19,6 +19,14 @@ npm install core-js
 
 у bable конфигурационный файл создаем сами
 
+НЕ ЗАБЫВАЕМ ПРИ ИСПОЛЬЗОВАНИИ Babel СОЗДАВАТЬ ФАЙЛ .browserslistrc
+
+2.1. При использовании Babel вместе с Webpack нужно скачать пакеты Babel для Webpack:
+
+npm install --save-dev babel-loader
+
+и в конфигурационный файл webpack добавить правило для распознавания Babel
+
 
 3. Команды для ESlint версии 10>:
 
