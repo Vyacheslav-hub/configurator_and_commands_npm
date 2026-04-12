@@ -42,5 +42,9 @@ npm install --save-dev mini-css-extract-plugin css-loader
 
 npm i -D webpack-dev-server
 
+в package.json в scripts написать  "build": "webpack --mode=production", - для билда файлов в папку dist
+ГЛАВНЫЙ ФАЙЛ СБОРЩИК В ПАПКЕ src/index.js
+
+в package.json в scripts написать "start": "webpack serve --mode=development" - для запуска live-server-webpack для папки dist
 !!!!!! Все что ты добавляем к расширению базового функционала Webpack нужно добавлять в его файл конфигуратор
 
