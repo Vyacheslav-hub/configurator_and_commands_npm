@@ -56,5 +56,15 @@ npm i -D webpack-dev-server
 ГЛАВНЫЙ ФАЙЛ СБОРЩИК В ПАПКЕ src/index.js
 
 в package.json в scripts написать "start": "webpack serve --mode=development" - для запуска live-server-webpack для папки dist
-!!!!!! Все что ты добавляем к расширению базового функционала Webpack нужно добавлять в его файл конфигуратор
+!!!!!! Все что мы добавляем к расширению базового функционала Webpack нужно добавлять в его файл конфигуратор
 
+
+4. Команды для live-server (!!!ИСПОЛЬЗУЕТСЯ КОГДА НЕ ИСПОЛЬЗУЕШЬ СБОРЩИКИ):
+
+npm i -D live-server
+
+в package.json в scripts написать "start": "live-server src"
+
+!!!МЫ НЕ ИСПОЛЬЗУЕМ С НИМ СБОРЩИКИ ПОЭТОМУ В ФАЙЛЕ index.html ПОДКЛЮЧАЕМ ФАЙЛЫ css И script
+
+!!!ЕСЛИ РАБОТАЕМ С МОДУЛЯМИ, Т.Е. СОБИРАЕМ ВСЕ В ОДНОМ ФАЙЛЕ js(index.js), ТО В index.html в теге script пишем еще type="module"
