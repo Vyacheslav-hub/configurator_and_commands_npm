@@ -17,13 +17,30 @@ npm install core-js
 
 в package.json в scripts написать "build": "babel src -d dist"
 
-у bable конфигурационный файл создаем сами 
+у bable конфигурационный файл создаем сами
 
 
-3. Команды для ESlint версии 10>
+3. Команды для ESlint версии 10>:
 
-npm init @eslint/config@latest 
+npm init @eslint/config@latest
 
 в package.json в scripts написать  "lint": "eslint ."
 
 у ESlint конфигурационный файл создается сам. Мы только добавляем в него игнорирование проверки папки dist и node__module
+
+3. Команды для Webpack:
+
+npm install --save-dev webpack webpack-cli
+
+у Webpack конфигурационный файл создаем сами. В него дальше пишем все что подключаем. Базово подключаем распознавание и создание файлов с расширением .css и .html
+для этого прописываем команды пакетов для loader и plugins:
+
+npm install --save-dev html-webpack-plugin
+npm install --save-dev mini-css-extract-plugin css-loader
+
+3.1. Для того чтобы когда мы используем Webpack для сборки в папке dist, собранные файлы изменялись в live-режиме, подключим пакет:
+
+npm i -D webpack-dev-server
+
+!!!!!! Все что ты добавляем к расширению базового функционала Webpack нужно добавлять в его файл конфигуратор
+
