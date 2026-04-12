@@ -42,6 +42,8 @@ npm install --save-dev mini-css-extract-plugin css-loader
 
 npm i -D webpack-dev-server
 
+КОГДА МЫ ИСПОЛЬЗУЕМ СБОРЩИК, ТО НЕ ПИШЕМ В ФАЙЛЕ index.html ПУТИ К css ФАЙЛАМ И script ОН САМ ИХ СОБИРАЕТ
+
 в package.json в scripts написать  "build": "webpack --mode=production", - для билда файлов в папку dist
 ГЛАВНЫЙ ФАЙЛ СБОРЩИК В ПАПКЕ src/index.js
 
