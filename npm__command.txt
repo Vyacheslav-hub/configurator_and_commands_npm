@@ -68,3 +68,21 @@ npm i -D live-server
 !!!МЫ НЕ ИСПОЛЬЗУЕМ С НИМ СБОРЩИКИ ПОЭТОМУ В ФАЙЛЕ index.html ПОДКЛЮЧАЕМ ФАЙЛЫ css И script
 
 !!!ЕСЛИ РАБОТАЕМ С МОДУЛЯМИ, Т.Е. СОБИРАЕМ ВСЕ В ОДНОМ ФАЙЛЕ js(index.js), ТО В index.html в теге script пишем еще type="module"
+
+
+
+5. Команды для jest с исполдьзованием babel и eslint:
+
+npm i -D jest и все теже пакеты что и для babel и eslint
+
+!!!В файле-конфигуратор eslint добавляем значение в поле languageOptions: {
+    globals: {
+      ...globals.jest,
+    }}
+
+!!!!и в игноре ignores: ["dist", "node_modules", "coverage"]    
+
+
+!!!! Также не забываем добавить папку coverage в gitignore
+
+в package.json в scripts написать "test": "jest --coverage" (--coverage тогда проверяет покрытость тестов)
