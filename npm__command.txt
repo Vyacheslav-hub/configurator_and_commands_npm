@@ -80,9 +80,21 @@ npm i -D jest и все теже пакеты что и для babel и eslint
       ...globals.jest,
     }}
 
-!!!!и в игноре ignores: ["dist", "node_modules", "coverage"]    
+!!!!и в игноре ignores: ["dist", "node_modules", "coverage"]
 
 
 !!!! Также не забываем добавить папку coverage в gitignore
 
 в package.json в scripts написать "test": "jest --coverage" (--coverage тогда проверяет покрытость тестов)
+
+
+
+
+6. Добавляем для github автоматическую сборку с jest и eslint при пуше в реп с помощью GitHub Actions:
+
+6.1 Создаем папку с файлом .github/workflows/ci.yml и него помещаем настройки(смотреть тут же в нем)
+
+6.2 Для отслеживания процесса сборки можно добавить бейджик в файл README.md:
+
+# CI/CD test
+![CI](https://github.com/Vyacheslav-hub/Unit_testing/actions/workflows/ci.yml/badge.svg)
