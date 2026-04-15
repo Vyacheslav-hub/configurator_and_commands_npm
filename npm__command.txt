@@ -92,7 +92,36 @@ npm i -D jest и все теже пакеты что и для babel и eslint
 
 6. Добавляем для github автоматическую сборку с jest и eslint при пуше в реп с помощью GitHub Actions:
 
-6.1 Создаем папку с файлом .github/workflows/ci.yml и него помещаем настройки(смотреть тут же в нем)
+6.1 Создаем папку с файлом .github/workflows/ci.yml и него помещаем настройки:
+
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Run lint
+        run: npm run lint
+
 
 6.2 Для отслеживания процесса сборки можно добавить бейджик в файл README.md:
 
