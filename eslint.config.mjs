@@ -6,9 +6,13 @@ export default defineConfig([
   { files: ["**/*.{js,mjs,cjs}"],
     plugins: { js },
     extends: ["js/recommended"],
-    languageOptions: { globals: globals.browser }
+    languageOptions: {
+    globals: {
+      ...globals.browser,
+      ...globals.jest,
+    }}
   },
   {
-    ignores: ["dist", "node_modules"]
+    ignores: ["dist", "node_modules", "coverage"]
   },
 ]);
